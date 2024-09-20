@@ -4,7 +4,7 @@ function About() {
   return (
     <section>
       <h2>About Me</h2>
-      <img src="your-photo.jpg" alt="Miguel" />
+      <img src="public/163219103.png" alt="Miguel" />
       <p>Biografia.</p>
     </section>
   );
