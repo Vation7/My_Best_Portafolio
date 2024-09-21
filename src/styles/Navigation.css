@@ -1,0 +1,27 @@
+@import './variables.css';
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  padding: 10px;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}

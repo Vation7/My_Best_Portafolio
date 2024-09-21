@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #1e90ff;  /* Custom blue */
+    --secondary-color: #ff6347;  /* Custom red */
+    --background-color: #f4f4f4;  /* Light gray */
+    --text-color: #333333;  /* Dark gray */
+    --accent-color: #32cd32;  /* Lime green */
+    --footer-background: #333333;
+    --footer-text-color: white;
+  }
