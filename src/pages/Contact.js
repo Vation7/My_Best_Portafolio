@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/Contact.css';  // Make sure to import the new CSS file
 
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -10,36 +11,42 @@ function Contact() {
       setErrorMessage('All fields are required');
     } else {
       setErrorMessage('');
-      // Handle form submission
+      // Handle form submission (e.g., send data to the server)
     }
   };
 
   return (
-    <section>
+    <section className="contact-section">
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formState.name}
-          onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formState.email}
-          onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-        />
-        <textarea
-          name="message"
-          placeholder="Message"
-          value={formState.message}
-          onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-        />
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={formState.name}
+            onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formState.email}
+            onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+          />
+        </div>
+        <div className="form-group">
+          <textarea
+            name="message"
+            placeholder="Message"
+            value={formState.message}
+            onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+          />
+        </div>
         <button type="submit">Submit</button>
-        {errorMessage && <p>{errorMessage}</p>}
+        {errorMessage && <p className="error-text">{errorMessage}</p>}
       </form>
     </section>
   );

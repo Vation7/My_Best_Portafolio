@@ -6,12 +6,14 @@ import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('Portfolio'); // Portfolio is now the default page
+  const [currentPage, setCurrentPage] = useState('Portfolio'); // Set Portfolio as the default page
 
+  // Define the handlePageChange function to switch pages
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
+  // Function to render the appropriate page based on currentPage
   const renderPage = () => {
     switch (currentPage) {
       case 'Portfolio':
@@ -21,13 +23,13 @@ function App() {
       case 'Resume':
         return <Resume />;
       default:
-        return <Portfolio />;  // Fallback to Portfolio if any unknown page is requested
+        return <Portfolio />; // Default to Portfolio if an unknown page is requested
     }
   };
 
   return (
     <div>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} /> {/* Pass handlePageChange as a prop */}
       <main>{renderPage()}</main>
       <Footer />
     </div>

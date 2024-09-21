@@ -1,41 +1,46 @@
+/* src/styles/Header.css */
 @import './variables.css';
 
 .main-header {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 20px;
+  background-image: url('https://t4.ftcdn.net/jpg/02/76/08/07/360_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg');  /* Add your image here */
+  background-size: cover;  /* Ensure the image covers the entire header */
+  background-position: center;
+  padding: 40px;  /* Adjust padding to give space for the image */
   text-align: center;
+  display: flex;
+  flex-direction: column;  /* Ensure title is stacked above navigation */
+  justify-content: center;
+  align-items: center;
 }
 
 .header-title {
   font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.header-tagline {
-  font-size: 1rem;
+  color: white;  /* Ensure the text is visible against the image */
   margin-bottom: 20px;
-  color: var(--accent-color);
 }
 
 nav ul {
-  list-style-type: none;
-  display: flex;
+  list-style: none;
+  display: flex;  /* Flexbox to display links horizontally */
   justify-content: center;
-  gap: 20px;  /* Adds spacing between buttons */
+  gap: 20px;  /* Space between navigation items */
+}
+
+nav li {
+  margin: 0;
 }
 
 button.nav-link {
   background: none;
   border: none;
   color: white;
-  cursor: pointer;
-  padding: 10px 15px;
   font-weight: bold;
-  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
   transition: background-color 0.3s;
+  border-radius: 5px;
 }
 
 button.nav-link:hover {
-  background-color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.2);  /* Light hover effect */
 }

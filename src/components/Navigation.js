@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Navigation({ currentPage, handlePageChange }) {
+function Navigation({ currentPage, handlePageChange }) {  // Ensure handlePageChange is received as a prop
   return (
     <nav>
       <ul>
