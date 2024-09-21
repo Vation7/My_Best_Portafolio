@@ -1,9 +1,12 @@
-/* src/styles/Portfolio.css */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* 4 columns */
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);  /* 4 equal columns */
+  grid-column-gap: 70px;  /* Adds horizontal space between project cards */
+  grid-row-gap: 20px;  /* Adds vertical space between rows */
   margin: 20px 0;
+  width: 100%;
+  max-width: 1200px;  /* Constrain the grid width */
+  margin: 0 auto;  /* Center the grid on the page */
 }
 
 .project {
@@ -13,13 +16,17 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  width: 100%;  /* Ensure project card takes full width of the grid cell */
+  max-width: 100%;  /* Avoid expanding beyond grid cell */
 }
 
 .project img {
-  max-width: 100%;
+  max-width: 100%;  /* Ensure images fit within the project card */
   height: auto;
   margin-bottom: 10px;
 }
+
+
 
 .project h3 {
   margin-bottom: 10px;
@@ -37,23 +44,4 @@
 
 .project:hover {
   transform: scale(1.05);
-}
-
-/* Make grid responsive */
-@media (max-width: 1200px) {
-  .project-grid {
-    grid-template-columns: repeat(3, 1fr);  /* 3 columns for medium screens */
-  }
-}
-
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);  /* 2 columns for small screens */
-  }
-}
-
-@media (max-width: 600px) {
-  .project-grid {
-    grid-template-columns: 1fr;  /* 1 column for mobile */
-  }
 }

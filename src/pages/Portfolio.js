@@ -117,6 +117,16 @@ function Portfolio() {
 
   return (
     <section>
+      {/* About Me Section */}
+      <div className="about-me">
+        <h2>About Me</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel justo at leo fermentum viverra. Sed nec elit non mi tempus venenatis. 
+          Fusce vel elit nec velit fermentum scelerisque sit amet eget justo. Nullam ac tristique orci, nec tincidunt est. 
+        </p>
+      </div>
+
+      {/* Portfolio Section */}
       <h2>Portfolio</h2>
       <div className="project-grid">
         {projects.map((project, index) => (

@@ -1,14 +1,19 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* src/styles/index.css */
+@import './variables.css';
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: var(--background-color);
+  background-color: var(--background-color);  /* Use a custom background color */
   color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* To give content a centered look and feel */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 a {
@@ -18,5 +23,4 @@ a {
 
 a:hover {
   color: var(--accent-color);
-  text-decoration: underline;
 }
