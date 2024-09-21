@@ -9,6 +9,12 @@ import Resume from './pages/Resume';
 function App() {
   const [currentPage, setCurrentPage] = useState('About');
 
+  // Function to handle page changes
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  // Function to render the appropriate page based on currentPage
   const renderPage = () => {
     switch (currentPage) {
       case 'Portfolio':
@@ -24,7 +30,7 @@ function App() {
 
   return (
     <div>
-      <Header currentPage={currentPage} handlePageChange={setCurrentPage} />
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
       <main>{renderPage()}</main>
       <Footer />
     </div>
